@@ -11,8 +11,9 @@
             <tr>
                 <th>Name</th>
                 <th>Asset Id</th>
-                <!-- <th>Price</th> -->
                 <th>Data Symbols Count</th>
+                <th>Data Start</th>
+                <th>Data End</th>
             </tr>
         </thead>
         <tbody>
@@ -30,11 +31,20 @@
                 {
                     "data": "asset_id"
                 },
-                // {
-                //     "data": "price_usd"
-                // },
                 {
                     "data": "data_symbols_count"
+                },
+                {
+                    "data": "data_start",
+                    "render": function(data, type, row) {
+                        return data ? data : ""
+                    }
+                },
+                {
+                    "data": "data_end",
+                    "render": function(data, type, row) {
+                        return data ? data : ""
+                    }
                 }
             ]
         })
