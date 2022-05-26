@@ -31,7 +31,7 @@ class CoinService
     public function getAssets()
     {
         try {
-            $response = $this->client->request('GET', $this->version . '/assets');
+            $response = $this->client->request('GET', $this->version . '/assets', ['verify' => false]);
             if ($response->getStatusCode() == 200) {
                 $data = json_decode($response->getBody(), true);
                 return ['success' => true, 'data' => $data];

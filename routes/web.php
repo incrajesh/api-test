@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/assets', function () {
+    return view('assets');
+})->name('assets');
